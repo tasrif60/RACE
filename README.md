@@ -36,7 +36,7 @@ After connecting the server, create a database named “road_collusion” and th
 Make sure folders python version is **3.7.2** otherwise some packages would not work. To make sure python environment you can use `brew install pyenv` to 
 install in your pc or you can check [pyenv]( https://github.com/pyenv/pyenv/wiki) site to check more details. However you can use it even if you want to 
 run multiple version of python in you machine. For analytics just download the final_model note book from the git repository. In addition to you have download the actual [csv file](https://www.dropbox.com/s/tksbkn4wvek92by/NCDB_1999_to_2017.csv?dl=0) form this link to run the process and get better result. You should have a powerful machine with large memory(minimum 16 GB) to run the whole notebook properly. However, you have to download the `.sav` file from this [link]() to run the prediction from our web application. This file is a bit large as well (about 1.8 GB), so it might take time to download depending on your internet speed. Place this file in your local repository and change the path from the code.
-
+![mongo3](https://github.com/tasrif60/RACE/blob/master/readme_images/pycharm3.png)
 
 **6.	Open the repo and run:** Open the repo with our IDE PyCharm and  give it some time load the full project. 
 Then select the virtual environment and runt the using play button on the top right corner. 
