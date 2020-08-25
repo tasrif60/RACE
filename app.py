@@ -16,7 +16,7 @@ app.config["MONGO_URI"] = "mongodb://localhost:27017/road_collusion"
 app.config["MONGO_DBNAME"] = "road_collusion"
 mongo = PyMongo(app)
 
-db_collection = mongo.db.collusion
+db_collection = mongo.db.collusion_final
 
 
 ################# Global Variables ################
@@ -300,7 +300,7 @@ def submit():
     print(data_array)
     #[9, 10, 2, 55, 2, 15, 0, 16, 94, 28]
 
-    final_model = pickle.load(open("random_forest_model.sav", "rb"))
+    final_model = pickle.load(open("/Users/tasrifahmed/random_forest_model.sav", "rb"))
     Prediction_initial = final_model.predict(np.array([data_array]))
     print(Prediction_initial)
     final_prediction = int(Prediction_initial[0])
