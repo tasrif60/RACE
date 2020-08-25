@@ -25,7 +25,10 @@ using different algorithms. You can install anaconda for any OS from [Anaconda S
 data for our web application. You can download and install windows version from [MongoDB Windows]( https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/). For other os installation go to terminal and just use following command:
 `brew install mongodb-community@4.4`
 We used this stable version for our project purpose. After completing installation you can start the server typing ` brew services start mongodb-community@4.4 ` on the command line and start working on it in terminal.
-In stead of working in terminal, we used a client named [MongoDB Compass Community Edition]( https://www.mongodb.com/try/download/compass). It made storing our data easy. After installing the compass you can connect it with mongodb using `localhos:27017` where mongo default port 27017. After connecting the server, create a database named “road_collusion” and then create a collection named ‘collusion_final’. After that import our data ‘mongo_data.csv’ file to the collection using ‘data import’ option. It is worth mentioning that, during import convert all the data type into Number from top dropdown. The csv file was exported from our local database.  
+In stead of working in terminal, we used a client named [MongoDB Compass Community Edition]( https://www.mongodb.com/try/download/compass). It made storing our data easy. After installing the compass you can connect it with mongodb using `localhos:27017` where mongo default port 27017. 
+![mongo1](https://github.com/tasrif60/RACE/blob/master/readme_images/mongo1.png)
+After connecting the server, create a database named “road_collusion” and then create a collection named ‘collusion_final’. After that import our data ‘mongo_data.csv’ file to the collection using ‘data import’ option. It is worth mentioning that, during import convert all the data type into Number from top dropdown. The csv file was exported from our local database. 
+![mongo1](https://github.com/tasrif60/RACE/blob/master/readme_images/mongo2.png)
 
 
 **5.	Download or Clone repository:** From this repository you can download all files and create your own local repository for the project. 
@@ -35,3 +38,6 @@ run multiple version of python in you machine.
 
 **6.	Open the repo and run:** Open the repo with our IDE PyCharm and  give it some time load the full project. 
 Then select the virtual environment and runt the using play button on the top right corner. 
+![mongo1](https://github.com/tasrif60/RACE/blob/master/readme_images/pycharm1.png)
+
+
