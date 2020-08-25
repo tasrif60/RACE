@@ -1,0 +1,183 @@
+{% extends 'base.html' %}
+
+<h4>{% block title %} Charts {% endblock %}</h4>
+
+
+{% block content %}
+
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="card m-b-20">
+                                <div class="card-body">
+    
+                                    <h4 class="mt-0 header-title">Line Chart Collusion of last 10 years</h4>
+    
+                                    <ul class="list-inline widget-chart m-t-20 m-b-15 text-center">
+                                        <li class="list-inline-item">
+                                            <h5 class="mb-0">{{ count_all }}</h5>
+                                            <p class="text-muted">Total Collusion</p>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <h5 class="mb-0">{{ count_1999 }}</h5>
+                                            <p class="text-muted">In Year 1999</p>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <h5 class="mb-0">{{count_2014}}</h5>
+                                            <p class="text-muted">In Year 2014</p>
+                                        </li>
+                                    </ul>
+    
+                                    <canvas id="lineChart" height="300"></canvas>
+    
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+    
+                        <div class="col-xl-6">
+                            <div class="card m-b-20">
+                                <div class="card-body">
+    
+                                    <h4 class="mt-0 header-title">Bar Chart</h4>
+    
+                                    <ul class="list-inline widget-chart m-t-20 m-b-15 text-center">
+                                        <li class="list-inline-item">
+                                            <h5 class="mb-0">{{ count_all }}</h5>
+                                            <p class="text-muted">Total Collusion</p>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <h5 class="mb-0">{{ count_jan }}</h5>
+                                            <p class="text-muted">Collusion in January </p>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <h5 class="mb-0">{{ count_oct }}</h5>
+                                            <p class="text-muted">Height Collusion </p>
+                                        </li>
+                                    </ul>
+    
+                                    <canvas id="bar" height="300"></canvas>
+    
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+    
+    
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="card m-b-20">
+                                <div class="card-body">
+    
+                                    <h4 class="mt-0 header-title">Gender Ratio of Collusion</h4>
+    
+                                    <ul class="list-inline widget-chart m-t-20 m-b-15 text-center">
+                                        <li class="list-inline-item">
+                                            <h5 class="mb-0">{{ count_all }}</h5>
+                                            <p class="text-muted">Total Person</p>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <h5 class="mb-0">{{ count_m }}</h5>
+                                            <p class="text-muted">Male</p>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <h5 class="mb-0">{{count_f}}</h5>
+                                            <p class="text-muted">Female</p>
+                                        </li>
+                                    </ul>
+    
+                                    <canvas id="pie" height="260"></canvas>
+    
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+    
+                        <div class="col-xl-6">
+                            <div class="card m-b-20">
+                                <div class="card-body">
+    
+                                    <h4 class="mt-0 header-title">Age wise distribution of Collusion</h4>
+    
+                                    <ul class="list-inline widget-chart m-t-20 m-b-15 text-center">
+                                        <li class="list-inline-item">
+                                            <h5 class="mb-0">{{ young_age }}</h5>
+                                            <p class="text-muted">Young</p>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <h5 class="mb-0">{{ middle_age }}</h5>
+                                            <p class="text-muted">Middle</p>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <h5 class="mb-0">{{ old_age }}</h5>
+                                            <p class="text-muted">Old</p>
+                                        </li>
+                                    </ul>
+    
+                                    <canvas id="doughnut" height="260"></canvas>
+    
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+    
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="card m-b-20">
+                                <div class="card-body">
+    
+                                    <h4 class="mt-0 header-title">Day wise Collusions</h4>
+    
+                                    <ul class="list-inline widget-chart m-t-20 m-b-15 text-center">
+                                        <li class="list-inline-item">
+                                            <h5 class="mb-0">{{ count_all }}</h5>
+                                            <p class="text-muted">Total Collusion</p>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <h5 class="mb-0"></h5>
+                                            <p class="text-muted"></p>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <h5 class="mb-0"></h5>
+                                            <p class="text-muted"></p>
+                                        </li>
+                                    </ul>
+    
+                                    <canvas id="polarArea" height="300"> </canvas>
+    
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+    
+                        <div class="col-xl-6">
+                            <div class="card m-b-20">
+                                <div class="card-body">
+    
+                                    <h4 class="mt-0 header-title">Collusion Difference Clear Vs Snow by week</h4>
+    
+                                    <ul class="list-inline widget-chart m-t-20 m-b-15 text-center">
+                                        <li class="list-inline-item">
+                                            <h5 class="mb-0">{{ total_data_clear }}</h5>
+                                            <p class="text-muted">Total in Clear weather</p>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <h5 class="mb-0">{{ total_data_snow }}</h5>
+                                            <p class="text-muted">Total in snowy weather</p>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <h5 class="mb-0">{{ total_data_rain }}</h5>
+                                            <p class="text-muted">Total in rainy weather</p>
+                                        </li>
+                                    </ul>
+    
+                                    <canvas id="radar" height="300"></canvas>
+    
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+
+
+
+
+
+
+
+{% endblock %}

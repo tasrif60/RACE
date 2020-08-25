@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+<h4> {% block title %} Data Table  {% endblock %} </h4>
+
+
+{% block content %}
+
+
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card m-b-20">
+                                <div class="card-body">
+    
+                                    <div class="table-rep-plugin">
+                                        <div class="table-responsive b-0" data-pattern="priority-columns">
+
+                                        <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                        <thead>
+                                        <tr>
+                                            <th>Year</th>
+                                            <th>Month</th>
+                                            <th>Day of the week</th>
+                                            <th>Hours of Day</th>
+                                            <th>Number of vehicle</th>
+                                            <th>Collusion Conf</th>
+                                            <th>Roadway Conf</th>
+                                            <th>Weather condition</th>
+                                            <th>Traffic control</th>
+                                            <th>Vehicle Year</th>
+                                            <th>Person Age</th>
+                                        </tr>
+                                        </thead>
+
+
+                                        <tbody>
+
+                                        {% for hello in show_data %}
+
+                                        <tr>
+
+                                            <td>{{ hello.C_YEAR }}</td>
+                                            <td>{{ hello.C_MNTH }}</td>
+                                            <td>{{ hello.C_WDAY }}</td>
+                                            <td>{{ hello.C_HOUR }}</td>
+                                            <td>{{ hello.C_VEHS }}</td>
+                                            <td>{{ hello.C_CONF }}</td>
+                                            <td>{{ hello.C_RCFG }}</td>
+                                            <td>{{ hello.C_WTHR }}</td>
+                                            <td>{{ hello.C_TRAF }}</td>
+                                            <td>{{ hello.V_YEAR }}</td>
+                                            <td>{{ hello.P_AGE }}</td>
+
+
+                                        </tr>
+                                         {% endfor %}
+
+
+
+
+                                        </tbody>
+                                    </table>
+
+
+                                        </div>
+    
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+
+
+
+    
+{% endblock %} }

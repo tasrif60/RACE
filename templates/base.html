@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>RACE Web Application </title>
+        <meta content="Admin Dashboard" name="description" />
+        <meta content="Themesbrand" name="author" />
+        <link rel="shortcut icon" href="/static/assets/images/favicon.ico">
+
+        <link rel="stylesheet" href="/static/plugins/morris/morris.css">
+
+        <link href="/static/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="/static/assets/css/icons.css" rel="stylesheet" type="text/css">
+        <link href="/static/assets/css/style.css" rel="stylesheet" type="text/css">
+       <link href="/static/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+      <link href="/static/plugins/bootstrap-touchspin/css/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
+      <script src="/static/plugins/chart.js/chart.min.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Navigation Bar-->
+        <header id="topnav">
+            <div class="topbar-main">
+                <div class="container-fluid">
+
+                    <!-- Logo container-->
+                    <div class="logo">
+
+                        <a href="index.html" class="logo">
+
+                            
+                        </a>
+
+                    </div>
+
+                    <!-- End Logo container-->
+
+
+
+
+                    <div class="clearfix"></div>
+
+                </div> <!-- end container -->
+            </div>
+            <!-- end topbar-main -->
+
+            <!-- MENU Start -->
+            <div class="navbar-custom">
+                <div class="container-fluid">
+                    <div id="navigation">
+                        <!-- Navigation Menu-->
+                        <ul class="navigation-menu">
+
+                            <li class="has-submenu">
+                                <a href="{{ url_for('home') }}"><i class="mdi mdi-home"></i>Dashboard</a>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="{{ url_for('forms') }}"><i class="mdi mdi-buffer"></i>Prediction</a>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="{{ url_for('tables') }}"><i class="mdi mdi-black-mesa"></i>Tables</a>
+                            </li>
+
+
+                            <li class="has-submenu">
+                                <a href="{{ url_for('charts') }}"><i class="mdi mdi-finance"></i>Charts</a>
+                            </li>
+
+
+                        </ul>
+                        <!-- End navigation menu -->
+                    </div> <!-- end #navigation -->
+                </div> <!-- end container -->
+            </div> <!-- end navbar-custom -->
+        </header>
+        <!-- End Navigation Bar-->
+
+
+
+<!-- page wrapper start -->
+        <div class="wrapper">
+            <div class="page-title-box">
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-sm-12">
+
+
+                            <h4 class="page-title"> {% block title %} {% endblock %}</h4>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item active">Welcome to RACE</li>
+                            </ol>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- end container-fluid -->
+
+            </div>
+            <!-- page-title-box -->
+
+            <div class="page-content-wrapper">
+                <div class="container-fluid">
+
+
+                    {% block content  %}
+
+
+                    {% endblock %}
+
+
+                    <!-- end row -->
+                </div>
+                <!-- end container-fluid -->
+            </div>
+            <!-- end page content-->
+
+        </div>
+        <!-- page wrapper end -->
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-12">
+                        2020 © RACE <span class="d-none d-sm-inline-block"> - Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+
+
+        <!-- jQuery  -->
+        <script src="/static/assets/js/jquery.min.js"></script>
+        <script src="/static/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="/static/assets/js/jquery.slimscroll.js"></script>
+        <script src="/static/assets/js/waves.min.js"></script>
+
+        <script src="/static/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+
+        <!-- Peity JS -->
+        <script src="/static/plugins/peity/jquery.peity.min.js"></script>
+
+        <script src="/static/plugins/morris/morris.min.js"></script>
+        <script src="/static/plugins/raphael/raphael-min.js"></script>
+
+
+        <script src="/static/plugins/select2/js/select2.min.js"></script>
+
+        <!-- App js -->
+        <script src="/static/assets/js/app.js"></script>
+
+        <!-- Chart JS -->
+
+
+
+        <!-- Responsive-table-->
+        <script src="/static/plugins/RWD-Table-Patterns/dist/js/rwd-table.min.js"></script>
+
+
+
+
+     <!-- Required datatable js -->
+        <script src="/static/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="/static/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+        <!-- Buttons examples -->
+        <script src="/static/plugins/datatables/dataTables.buttons.min.js"></script>
+        <script src="/static/plugins/datatables/buttons.bootstrap4.min.js"></script>
+        <script src="/static/plugins/datatables/jszip.min.js"></script>
+        <script src="/static/plugins/datatables/pdfmake.min.js"></script>
+        <script src="/static/plugins/datatables/vfs_fonts.js"></script>
+        <script src="/static/plugins/datatables/buttons.html5.min.js"></script>
+        <script src="/static/plugins/datatables/buttons.print.min.js"></script>
+        <script src="/static/plugins/datatables/buttons.colVis.min.js"></script>
+        <!-- Responsive examples -->
+        <script src="/static/plugins/datatables/dataTables.responsive.min.js"></script>
+        <script src="/static/plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+        <!-- Datatable init js -->
+        <script src="/static/assets/pages/datatables.init.js"></script>
+
+
+        <!-- others init js -->
+
+
+
+<script>
+
+// -------------------- Chart page charts start ---------------------
+
+
+!function($) {
+    "use strict";
+
+    var ChartJs = function() {};
+
+    ChartJs.prototype.respChart = function(selector,type,data, options) {
+        // get selector by context
+        var ctx = selector.get(0).getContext("2d");
+        // pointing parent container to make chart js inherit its width
+        var container = $(selector).parent();
+
+        // enable resizing matter
+        $(window).resize( generateChart );
+
+        // this function produce the responsive Chart JS
+        function generateChart(){
+            // make chart width fit with its container
+            var ww = selector.attr('width', $(container).width() );
+            switch(type){
+                case 'Line':
+                    new Chart(ctx, {type: 'line', data: data, options: options});
+                    break;
+                case 'Doughnut':
+                    new Chart(ctx, {type: 'doughnut', data: data, options: options});
+                    break;
+                case 'Pie':
+                    new Chart(ctx, {type: 'pie', data: data, options: options});
+                    break;
+                case 'Bar':
+                    new Chart(ctx, {type: 'bar', data: data, options: options});
+                    break;
+                case 'Radar':
+                    new Chart(ctx, {type: 'radar', data: data, options: options});
+                    break;
+                case 'PolarArea':
+                    new Chart(ctx, {data: data, type: 'polarArea', options: options});
+                    break;
+                case 'Scatter':
+                    new Chart(ctx, {data: data, type: 'scatter', options: options});
+                    break;
+            }
+            // Initiate new chart or Redraw
+
+        };
+        // run function - render chart at first load
+        generateChart();
+    },
+    //init
+    ChartJs.prototype.init = function() {
+        //creating lineChart
+        var lineChart = {
+            labels: [
+
+                {% for item in year_labels %}
+                   "{{item}}",
+                  {% endfor %}
+
+
+            ],
+            datasets: [
+                {
+                    label: "Collusion In Last 10 years",
+                    fill: true,
+                    lineTension: 1.0,
+                    backgroundColor: "rgba(245, 178, 37, 0.2)",
+                    borderColor: "#f5b225",
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    pointBorderColor: "#f5b225",
+                    pointBackgroundColor: "#fff",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: "#f5b225",
+                    pointHoverBorderColor: "#fff",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 30,
+                    data: [
+
+                        {% for item in year_data %}
+                           "{{item}}",
+                        {% endfor %}
+                    ]
+                }
+            ]
+        };
+
+        var lineOpts = {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        max: 200,
+                        min: 30,
+                        stepSize: 30
+                    }
+                }]
+            }
+        };
+
+        this.respChart($("#lineChart"),'Line',lineChart, lineOpts);
+
+        //donut chart
+        var donutChart = {
+            labels: [
+                "Young",
+                "Middle Age",
+                "Old"
+            ],
+            datasets: [
+                {
+                    data: [{{ young_age }}, {{ middle_age }}, {{ old_age }}],
+                    backgroundColor: [
+                        "#f5b225",
+                        "#345ef2",
+                        "#f28a5b"
+                    ],
+                    hoverBackgroundColor: [
+                        "#f58006",
+                        "#0804f2",
+                        "#5df22b"
+                    ],
+                    hoverBorderColor: "#fff"
+                }]
+        };
+        this.respChart($("#doughnut"),'Doughnut',donutChart);
+
+
+        //Pie chart
+        var pieChart = {
+            labels: [
+                "Male",
+                "Female"
+            ],
+            datasets: [
+                {
+                    data: [{{ count_m }}, {{ count_f }}],
+                    backgroundColor: [
+                        "#1b82ec",
+                        "#ebeff2"
+                    ],
+                    hoverBackgroundColor: [
+                        "#1b82ec",
+                        "#ebeff2"
+                    ],
+                    hoverBorderColor: "#fff"
+                }]
+        };
+        this.respChart($("#pie"),'Pie',pieChart);
+
+
+        //barchart
+        var barChart = {
+            labels: [
+                {% for item in month_label %}
+                   "{{item}}",
+                  {% endfor %}
+            ],
+            datasets: [
+                {
+                    label: "Month Wise Collusion Statistics",
+                    backgroundColor: "#1b82ec",
+                    borderColor: "#1b82ec",
+                    borderWidth: 1,
+                    hoverBackgroundColor: "#1b82ec",
+                    hoverBorderColor: "#1b82ec",
+                    data: [
+                        {% for item in month_data %}
+                           "{{item}}",
+                        {% endfor %}
+
+                    ]
+                }
+            ]
+        };
+        this.respChart($("#bar"),'Bar',barChart);
+
+
+        //radar chart
+        var radarChart = {
+            labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            datasets: [
+                {
+                    label: "Snow",
+                    backgroundColor: "rgba(245, 178, 37, 0.2)",
+                    borderColor: "#f5b225",
+                    pointBackgroundColor: "#f5b225",
+                    pointBorderColor: "#fff",
+                    pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "#f5b225",
+                    data: [
+                        {% for item in data_snow %}
+                           "{{item}}",
+                        {% endfor %}
+
+
+                    ]
+                },
+                {
+                    label: "Clear",
+                    backgroundColor: "rgba(27, 130, 236, 0.2)",
+                    borderColor: "#1b82ec",
+                    pointBackgroundColor: "#1b82ec",
+                    pointBorderColor: "#fff",
+                    pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "#1b82ec",
+                    data: [
+                        {% for item in data_sunny %}
+                           "{{item}}",
+                        {% endfor %}
+                    ]
+                },
+
+                {
+                    label: "Rain",
+                    backgroundColor: "rgba(44,236,110,0.2)",
+                    borderColor: "#15ec11",
+                    pointBackgroundColor: "#15ec11",
+                    pointBorderColor: "#fff",
+                    pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "#15ec11",
+                    data: [
+                        {% for item in data_rain %}
+                           "{{item}}",
+                        {% endfor %}
+                    ]
+                }
+            ]
+        };
+        this.respChart($("#radar"),'Radar',radarChart);
+
+        //Polar area  chart
+        var polarChart = {
+            datasets: [{
+                data: [
+
+                    {% for item in day_wise %}
+                           "{{item}}",
+                        {% endfor %}
+
+                    ],
+                backgroundColor: [
+                    "#f16c69",
+                    "#1b82ec",
+                    "#ebeff2",
+                    "#f5b225",
+                    "#f57eab",
+                    "#d9cdf5",
+                    "#6ef5d3",
+                ],
+                label: 'My dataset', // for legend
+                hoverBorderColor: "#fff"
+            }],
+            labels: [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday",
+            ]
+        };
+        this.respChart($("#polarArea"),'PolarArea',polarChart);
+
+
+
+
+     //Scatter Chart
+        var scatterChart = {
+			datasets: [{
+				label: 'My First dataset',
+				borderColor: window.chartColors.red,
+				backgroundColor: color(window.chartColors.red).alpha(0.2).rgbString(),
+				data: [23,23,45,45,54]
+			}, {
+				label: 'My Second dataset',
+				borderColor: window.chartColors.blue,
+				backgroundColor: color(window.chartColors.blue).alpha(0.2).rgbString(),
+				data: [45,45,45,65,68]
+			}]
+		};
+        	this.respChart($("#scatter"),'Scatter',scatterChart);
+
+    },
+    $.ChartJs = new ChartJs, $.ChartJs.Constructor = ChartJs
+
+}(window.jQuery),
+
+//initializing
+function($) {
+    "use strict";
+    $.ChartJs.init()
+}(window.jQuery);
+
+
+
+
+// -------------------- Chart page charts ends ---------------------
+
+
+</script>
+
+
+
+<script>
+
+
+ // ----------------- DashBoard Charts Starts ---------------
+
+
+!function($) {
+    "use stricts";
+
+    var Dashboard = function() {};
+
+    //creates area chart
+    Dashboard.prototype.createAreaChart = function (element, pointSize, lineWidth, data, xkey, ykeys, labels, lineColors) {
+        Morris.Area({
+            element: element,
+            pointSize: 0,
+            lineWidth: 0,
+            data: data,
+            xkey: xkey,
+            ykeys: ykeys,
+            labels: labels,
+            resize: true,
+            gridLineColor: '#eee',
+            hideHover: 'auto',
+            lineColors: lineColors,
+            fillOpacity: .7,
+            behaveLikeLine: true
+        });
+    },
+
+    //creates Donut chart
+    Dashboard.prototype.createDonutChart = function (element, data, colors) {
+        Morris.Donut({
+            element: element,
+            data: data,
+            resize: true,
+            colors: colors
+        });
+    },
+
+     //pie
+        $('.peity-pie').each(function () {
+            $(this).peity("pie", $(this).data());
+        });
+
+        //donut
+        $('.peity-donut').each(function () {
+            $(this).peity("donut", $(this).data());
+        });
+
+
+
+    Dashboard.prototype.init = function() {
+
+        //creating area chart
+        var $areaData = [
+            {y: '2011', a: {{ year_2011_1 }}, b: {{ year_2011_2 }}, c:{{year_2011_3 }}},
+            {y: '2012', a:{{ year_2012_1 }} , b:{{year_2012_2  }} , c:{{year_2012_3 }}},
+            {y: '2013', a:{{ year_2013_1 }} , b:{{ year_2013_2 }} , c:{{year_2013_3}}},
+            {y: '2014', a:{{ year_2014_1 }} , b:{{ year_2014_2 }} , c:{{ year_2014_3}}},
+            {y: '2015', a:{{ year_2015_1 }} , b:{{ year_2015_2 }} , c:{{ year_2015_3}}},
+            {y: '2016', a:{{ year_2016_1 }} , b:{{ year_2016_2 }} , c:{{year_2016_3 }}},
+            {y: '2017', a:{{ year_2017_1 }} , b:{{ year_2017_2 }} , c:{{ year_2017_3}}}
+        ];
+        this.createAreaChart('morris-area-example', 0, 0, $areaData, 'y', ['a', 'b', 'c'], ['Non-intersection', 'At an intersection', 'Intersection with parking lot'], ['#4dcc1f', '#f5b225', '#1b82ec']);
+
+        //creating donut chart
+        var $donutData = [
+            {label: "Clear Weather", value: {{ clear_count }} },
+            {label: "Rainy Weather", value:{{ rain_count }} },
+            {label: "Snowing Weather", value:{{ snow_count }}  }
+        ];
+        this.createDonutChart('morris-donut-example', $donutData, ['#f42325', '#1b82ec', '#f5b225']);
+
+    },
+    //init
+    $.Dashboard = new Dashboard, $.Dashboard.Constructor = Dashboard
+}(window.jQuery),
+
+//initializing
+function($) {
+    "use stricts";
+    $.Dashboard.init();
+}(window.jQuery);
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<script>
+  function getProgress() {
+    var source = new EventSource("/submitted");
+    source.onmessage = function(event) {
+      $('.progress-bar').css('width', event.data+'%').attr('aria-valuenow', event.data);
+      $('.progress-bar-label').text(event.data+'%');
+
+      // Event source closed after hitting 100%
+      if(event.data == 100){
+        source.close()
+      }
+    }
+  }
+  </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+
+<h4>{% block title %} Data Input Forms {% endblock %}</h4>
+
+
+{% block content %}
+
+
+
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card m-b-20">
+                                <div class="card-body">
+
+                                     <form class="" action="/submitted" method="post">
+                                        <div class="form-group">
+                                            <label>Year</label>
+
+                                            <select class="form-control select2" name="year">
+
+                                                <option>Select a year</option>
+                                                <option value="0">1999</option>
+                                                <option value="1">2000</option>
+                                                <option value="2">2001</option>
+                                                <option value="3">2002</option>
+                                                <option value="4">2003</option>
+                                                <option value="5">2004</option>
+                                                <option value="6">2005</option>
+                                                <option value="7">2006</option>
+                                                <option value="8">2007</option>
+                                                <option value="9">2008</option>
+                                                <option value="10">2009</option>
+                                                <option value="11">2010</option>
+                                                <option value="12">2011</option>
+                                                <option value="13">2012</option>
+                                                <option value="14">2013</option>
+                                                <option value="15">2014</option>
+                                                <option value="16">2015</option>
+                                                <option value="17">2016</option>
+                                                <option value="18">2017</option>
+                                                <option value="19">2018</option>
+                                                <option value="20">2019</option>
+                                                <option value="21">2020</option>
+                                                <option value="22">2021</option>
+
+                                            </select>
+                                        </div>
+
+                                         <div class="form-group">
+                                            <label>Month</label>
+                                            <div>
+                                            <select class="form-control select2" name="month" type="number">
+                                                 <option>Select a Month</option>
+                                                <option value="00">January</option>
+                                                <option value="01">February</option>
+                                                <option value="02">March</option>
+                                                <option value="03">April</option>
+                                                <option value="04">May</option>
+                                                <option value="05">June</option>
+                                                <option value="06">July</option>
+                                                <option value="07">August</option>
+                                                <option value="08">September</option>
+                                                <option value="09">October</option>
+                                                <option value=10>November</option>
+                                                <option value="11">December</option>
+
+                                            </select>
+
+                                            </div>
+                                        </div>
+
+                                            <div class="form-group">
+                                            <label>Day of the Week</label>
+                                            <div>
+                                                <select class="form-control select2" name="day" type="number">
+                                                 <option>Select a Day</option>
+                                                <option value="00">Monday</option>
+                                                <option value="01">Tuesday</option>
+                                                <option value="02">Wednesday</option>
+                                                <option value="03">Thursday</option>
+                                                <option value="04">Friday</option>
+                                                <option value="05">SaturDay</option>
+                                                <option value="06">Sunday</option>
+
+                                            </select>
+                                            </div>
+                                        </div>
+
+                                         <div class="form-group">
+                                            <label>Hours</label>
+                                            <div>
+                                                    <input data-parsley-type="digits" type="number"
+                                                            class="form-control" required
+                                                            placeholder="Enter hours between 00 to 23" name="hour"/>
+                                            </div>
+                                        </div>
+                                         <div class="form-group">
+                                            <label>Number of Vehicles involved</label>
+                                            <div>
+                                                <input data-parsley-type="digits" type="number"
+                                                        class="form-control" required
+                                                        placeholder="Enter digits 0 to 5" name="v_number"/>
+                                            </div>
+                                        </div>
+                                         <div class="form-group">
+                                            <label>Roadway configuration</label>
+                                            <div>
+
+                                                <select class="form-control select2" name="road">
+                                                <option>Select Road Configuration</option>
+                                                <optgroup label="Single Vehicle in Motion">
+                                                    <option value=01>Hit a moving object</option>
+                                                    <option value="02">Hit a stationary object</option>
+                                                    <option value="03">Ran off left shoulder</option>
+                                                    <option value="04">Ran off right shoulder</option>
+                                                    <option value="05">Rollover on roadway</option>
+                                                    <option value="06">Any other single vehicle collision configuration</option>
+                                                </optgroup>
+                                                <optgroup label="Two Vehicles in Motion-Same Direction of Travel">
+                                                    <option value="07">Rear-end collision</option>
+                                                    <option value="08">Side swipe</option>
+                                                    <option value="09">One vehicle passing to the left of the other, or left turn conflict</option>
+                                                    <option value="10">One vehicle passing to the right of the other, or right turn conflict</option>
+                                                    <option value="11">Any other two vehicle - same direction of travel configuration</option>
+
+                                                </optgroup>
+                                                <optgroup label="Two Vehicles in Motion - Different Direction of Travel">
+                                                    <option value="12">Head-on collision</option>
+                                                    <option value="13">Approaching side-swipe</option>
+                                                    <option value="14">Left turn across opposing traffic</option>
+                                                    <option value="15">Right turn, including turning conflicts</option>
+                                                    <option value="16">Right angle collision</option>
+                                                    <option value="17">Any other two-vehicle - different direction of travel configuration</option>
+                                                </optgroup>
+                                                    <optgroup label="Two Vehicles - Hit a Parked Motor Vehicle">
+                                                    <option value="18">Hit a parked motor vehicle</option>
+                                                </optgroup>
+                                                </select>
+
+
+                                            </div>
+                                        </div>
+                                         <div class="form-group">
+                                            <label>Weather condition</label>
+                                            <div>
+                                                <select class="form-control select2" name="weather" type="number">
+                                                 <option>Select a Weather Condition</option>
+                                                <option value="00">Clear and sunny</option>
+                                                <option value="01">Overcast, cloudy but no precipitation</option>
+                                                <option value="02">Raining</option>
+                                                <option value="03">Snowing, not including drifting snow</option>
+                                                <option value="04">Freezing rain, sleet, hail</option>
+                                                <option value="05">Visibility limitation(drifting snow, fog, smog, dust, smoke, mist)</option>
+                                                <option value="06">Strong wind</option>
+
+                                            </select>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="form-group">
+                                            <label>Traffic control</label>
+                                            <div>
+
+                                         <select class="form-control select2" name="traffic">
+
+                                                <option>Select a Traffic Condition</option>
+                                                <option value="00">Traffic signals fully operational</option>
+                                                <option value="01">Traffic signals in flashing mode</option>
+                                                <option value="02">Stop sign</option>
+                                                <option value="03">Yield sign</option>
+                                                <option value="04">Warning sign</option>
+                                                <option value="05">Pedestrian crosswalk</option>
+                                                <option value="06">Police officer</option>
+                                                <option value="07">School guard,flagman</option>
+                                                <option value="08">School crossing</option>
+                                                <option value="09">Reduced speed zone</option>
+                                                <option value="10">No passing zone sign</option>
+                                                <option value="11">Markings on the road</option>
+                                                <option value="12">School bus stopped with school bus signal lights flashing</option>
+                                                <option value="13">School bus stopped with school bus signal lights not flashing</option>
+                                                <option value="14">Railway crossing with signals, or signals and gates</option>
+                                                <option value="15">Railway crossing with signs only</option>
+                                                <option value="16">Control device not specified</option>
+                                                <option value="17">No control present</option>
+                                         </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Vehicle Year</label>
+                                            <div>
+                                                <input data-parsley-type="number" type="number"
+                                                        class="form-control" required
+                                                        placeholder="Enter numbers between 0 to 112" name="v_year"/>
+                                            </div>
+                                        </div>
+
+                                         <div class="form-group">
+                                            <label>Person Age</label>
+                                            <div>
+                                                <input data-parsley-type="number" type="number"
+                                                        class="form-control" required
+                                                        placeholder="Enter only numbers" name="age"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div>
+                                                <button type="submit" class="btn btn-primary waves-effect waves-light" onclick="getProgress()">
+                                                    Submit
+                                                </button>
+                                                <button type="reset" class="btn btn-secondary waves-effect m-l-5">
+                                                    Cancel
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                    <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                                    </div>
+
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+
+{% endblock %}

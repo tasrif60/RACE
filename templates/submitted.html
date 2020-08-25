@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+<h4>{% block title %} Data Input Forms {% endblock %}</h4>
+
+
+{% block content %}
+<div class="page-content-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <!-- Demo purpose only -->
+                                    <div style="min-height: 300px;">
+
+                                        <div class="jumbotron">
+                                            <h1 class="display-4">{{ show_data }}</h1>
+                                            <p class="lead">This is the predicted Result based on your input data</p>
+                                            <hr class="my-4">
+                                            <p>The result is showing the "Roadway Configuration" of roads in Canada based on
+                                            traffic dataset.
+                                            </p>
+                                            <p class="lead">
+                                            <a class="btn btn-primary btn-lg" href="{{ url_for('home') }}" role="button">Back to Dashboard</a>
+                                            </p>
+                                        </div>
+
+
+
+                                       <h1></h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+{% endblock %}
