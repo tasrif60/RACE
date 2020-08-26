@@ -25,10 +25,10 @@ using different algorithms. You can install anaconda for any OS from [Anaconda S
 **4.Install MongoDB and a MongoDB Client:** For the data storage, we used mongodb. It is basically no relational database and we used it to store our csv 
 data for our web application. You can download and install windows version from [MongoDB Windows]( https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/). For other os installation go to terminal and just use following command:
 `brew install mongodb-community@4.4`
-We used this stable version for our project purpose. After completing installation you can start the server typing ` brew services start mongodb-community@4.4 ` on the command line and start working on it in terminal.
+We used this stable version for our project purpose. After completing installation you can start the server typing ` brew services start mongodb-community@4.4 ` on the command line and start working on it in terminal.  
 In stead of working in terminal, we used a client named [MongoDB Compass Community Edition]( https://www.mongodb.com/try/download/compass). It made storing our data easy. After installing the compass you can connect it with mongodb using `localhos:27017` where mongo default port `27017`. 
 ![mongo1](https://github.com/tasrif60/RACE/blob/master/readme_images/mongo1.png)
-After connecting the server, create a database named “road_collusion” and then create a collection named ‘collusion_final’. After that import our data [‘mongo_data.csv’](https://www.dropbox.com/s/36nu3yfjeu108js/mongo_data.csv?dl=0) file to the collection using ‘data import’ option. It is worth mentioning that, during import convert all the data type into Number from top dropdown. The csv file was exported from our local database. 
+After connecting the server, create a database named “road_collusion” and then create a collection named ‘collusion_final’. After that import our data [‘mongo_data.csv’](https://www.dropbox.com/s/36nu3yfjeu108js/mongo_data.csv?dl=0) file to the collection using ‘data import’ option. It is worth mentioning that, during import convert all the data type into Number from top dropdown. The csv file was exported from our local database.   
 ![mongo1](https://github.com/tasrif60/RACE/blob/master/readme_images/mongo2.png)
 
 
